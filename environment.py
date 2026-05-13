@@ -21,7 +21,7 @@ def before_scenario(context,scenario):
     context.scenario_name = scenario.name
 
 def after_step(context,step):
-    if step.status.name 1= 'passed':
+    if step.status.name != 'passed':
         os.makedirs('screenshots',exist_ok=True)
 
         scenario_folder = context.scenario_name[:-9].replace(' ','_').replace(',','').replace('.','').replace('-','_')
